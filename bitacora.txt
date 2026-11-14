@@ -1,0 +1,33 @@
+Plaintext
+
+==================================================
+BITÁCORA DE TRABAJO - SEMANA 3 (DÍA 1: TAILWIND CSS)
+==================================================
+
+1. COMPARACIÓN DE ENFOQUES: BOOTSTRAP VS TAILWIND CSS (MINIRETO 1):
+-------------------------------------------------------------------
+- En Bootstrap (Semana 2): Para construir el botón se utilizaron componentes preseteados mediante clases combinadas como `class="btn btn-primary"`. Los estilos de padding, border-radius y hover vienen predefinidos por el framework.
+- En Tailwind CSS (Hoy): El botón se construye agrupando clases atómicas utility-first como `class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-6 py-3 rounded-lg"`.
+- Diferencia clave: Bootstrap es un framework enfocado en componentes preconstruidos (Object-Oriented CSS), mientras que Tailwind es un framework Utility-First que ofrece control total del diseño directo en el marcado HTML sin imponer componentes ni requerir CSS propio adicional.
+
+
+2. VERIFICACIÓN DE GENERACIÓN DE CLASES EN TAILWIND CLI (MINIRETO 2):
+---------------------------------------------------------------------
+- Búsqueda en `src/output.css`:
+  * Clase utilizada (`bg-slate-900`): Aparece generada explícitamente en el archivo compilado CSS porque el motor JIT de Tailwind la detectó al escanear `nocturna/index.html`.
+  * Clase no utilizada (`bg-pink-500`): NO aparece en `src/output.css`.
+- Explicación del comportamiento: Tailwind CLI utiliza un proceso de purgado (Just-In-Time / Tree-shaking) que analiza estáticamente los archivos del proyecto y compila en `output.css` única y exclusivamente las utilidades HTML que han sido declaradas. Esto garantiza archivos CSS de producción extremadamente livianos.
+
+
+3. REGLAS DEL KIT DE COMPONENTES RUEDA NOCTURNA v0.1 (MINIRETO 4):
+------------------------------------------------------------------
+- Radios de borde unificados: Todos los componentes (botones, cards, alertas e inputs) utilizan `rounded-lg` (8px de radio) para mantener consistencia visual.
+- Escala de espaciado: Múltiplos de 4 para padding e interlineado (`p-4`, `p-6`, `space-y-4`, `gap-4`).
+- Paleta de color nocturna:
+  * Fondos base: `slate-950` para el cuerpo principal y `slate-900` para contenedores y tarjetas.
+  * Color primario de acción: `emerald-500` (hover: `emerald-600`) con texto en `slate-950` para garantizar máximo contraste WCAG (cumple con creces el ratio 4.5:1).
+  * Bordes sutiles: `border-slate-800` en tarjetas e inputs.
+- Accesibilidad del kit:
+  * Todos los campos `<input>` disponen de su correspondiente `<label for="...">` visible y asociada.
+  * La alerta de éxito incluye el atributo `role="status"` para comunicar de inmediato a los lectores de pantalla la confirmación del evento.
+  * Todos los elementos interactivos conservan un anillo de foco visible (`focus:ring-2 focus:ring-emerald-400`) al ser navegados mediante la tecla Tab.

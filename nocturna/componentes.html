@@ -1,0 +1,135 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit de Componentes Rueda Nocturna v0.1</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen py-10 px-4">
+
+    <div class="max-w-4xl mx-auto space-y-12">
+        
+        <header class="border-b border-slate-800 pb-4">
+            <h1 class="text-3xl font-bold text-white tracking-tight">Kit de Componentes Rueda Nocturna v0.1</h1>
+            <p class="text-slate-400 text-sm mt-1">Librería de componentes reutilizables con reglas de diseño unificadas.</p>
+        </header>
+
+        <!-- SECCIÓN 1: BOTONES (MINIRETO 2 Y 4) -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-emerald-400 border-l-4 border-emerald-500 pl-3">1. Botones</h2>
+            
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-wrap gap-4 items-center">
+                <!-- Botón Principal -->
+                <button type="button" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-5 py-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+                    Botón Principal
+                </button>
+                
+                <!-- Botón Secundario -->
+                <button type="button" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-5 py-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+                    Botón Secundario
+                </button>
+                
+                <!-- Botón Contorno -->
+                <button type="button" class="border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 font-bold px-5 py-2.5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+                    Botón Contorno
+                </button>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CARDS (MINIRETO 3 Y 4) -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-emerald-400 border-l-4 border-emerald-500 pl-3">2. Card de Ruta</h2>
+            
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <article class="max-w-md bg-slate-950 border border-slate-800 rounded-xl overflow-hidden hover:border-emerald-500/50 transition-all duration-300">
+                    <img src="../Imagenes/Rueda Nocturna.png" alt="Ruta nocturna de muestra" class="w-full h-44 object-cover">
+                    <div class="p-5 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-bold text-white">Luces del Centro</h3>
+                            <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold px-2.5 py-1 rounded-full">
+                                Nivel: Fácil
+                            </span>
+                        </div>
+                        <p class="text-xs text-slate-400">Recorrido urbano por los alumbramientos de la ciudad.</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-xl font-bold text-emerald-400">$55.000</span>
+                            <button type="button" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 text-sm font-bold px-4 py-2 rounded-lg transition-colors focus:ring-2 focus:ring-emerald-400">
+                                Reservar
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: ALERTAS (MINIRETO 4) -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-emerald-400 border-l-4 border-emerald-500 pl-3">3. Alertas</h2>
+            
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 space-y-4">
+                
+                <!-- Alerta Información -->
+                <div class="bg-sky-950/40 border-l-4 border-sky-400 p-4 rounded-lg text-sky-200 space-y-1">
+                    <h3 class="font-bold text-sky-100 text-sm">Información importante</h3>
+                    <p class="text-xs">Los recorridos salen puntualmente a las 7:00 p. m. desde la sede principal.</p>
+                </div>
+
+                <!-- Alerta Éxito (Con aviso para lectores de pantalla mediante role="status") -->
+                <div role="status" class="bg-emerald-950/40 border-l-4 border-emerald-400 p-4 rounded-lg text-emerald-200 space-y-1">
+                    <h3 class="font-bold text-emerald-100 text-sm">¡Reserva confirmada!</h3>
+                    <p class="text-xs">Hemos enviado el código QR y los detalles de tu cupo a tu correo electrónico.</p>
+                </div>
+
+                <!-- Alerta Advertencia -->
+                <div class="bg-amber-950/40 border-l-4 border-amber-400 p-4 rounded-lg text-amber-200 space-y-1">
+                    <h3 class="font-bold text-amber-100 text-sm">Cupos limitados</h3>
+                    <p class="text-xs">Solo quedan 3 cupos disponibles para la ruta Luna en Las Palmas de este viernes.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: CAMPOS DE FORMULARIO / INPUTS (MINIRETO 4) -->
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-emerald-400 border-l-4 border-emerald-500 pl-3">4. Campos de Formulario</h2>
+            
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                
+                <!-- Campo 1: Correo electrónico -->
+                <div class="space-y-1.5">
+                    <label for="campo-correo" class="block text-sm font-semibold text-slate-200">
+                        Correo electrónico:
+                    </label>
+                    <input 
+                        type="email" 
+                        id="campo-correo" 
+                        name="correo" 
+                        placeholder="ejemplo@dominio.com"
+                        class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder-slate-500 rounded-lg px-3.5 py-2.5 text-sm transition-colors outline-none"
+                    >
+                    <p class="text-xs text-slate-400">Te enviaremos la confirmación del recorrido a esta dirección.</p>
+                </div>
+
+                <!-- Campo 2: Celular -->
+                <div class="space-y-1.5">
+                    <label for="campo-celular" class="block text-sm font-semibold text-slate-200">
+                        Número de celular:
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="campo-celular" 
+                        name="celular" 
+                        placeholder="3001234567"
+                        class="w-full bg-slate-950 border border-slate-700 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 text-white placeholder-slate-500 rounded-lg px-3.5 py-2.5 text-sm transition-colors outline-none"
+                    >
+                    <p class="text-xs text-slate-400">Usado únicamente para avisos de emergencia durante la ruta.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
